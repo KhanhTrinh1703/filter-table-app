@@ -13,3 +13,5 @@ class FilterableProductTable extends Component {
          );
     }
 }
+
+export default FilterableProductTable;
