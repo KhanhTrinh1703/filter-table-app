@@ -71,3 +71,7 @@ p {
 .product-table-title p {
   font-weight: bold;
 }
+
+.out-of-stock p {
+  color: red;
+}
