@@ -3,15 +3,13 @@ import SearchBar from './SearchBar.js';
 import ProductTable from './ProductTable.js';
 
 class FilterableProductTable extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {  }
-    }
+    //
     render() { 
+        const data_product = this.props.data_product
         return ( 
             <div className='filterable'>
                 <SearchBar />
-                <ProductTable />
+                <ProductTable data_product={data_product}/>
             </div>
          );
     }
