@@ -11,3 +11,63 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.search-box {
+  display: block;
+}
+
+.header-name {
+  display: inline-block;
+}
+
+.header-price {
+  display: inline-block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.filterable {
+  border: 2px solid orange;
+  width: 30%;
+  margin: auto auto;
+}
+
+.search-bar {
+  border: 2px solid blue;
+  margin: 5px;
+}
+
+.product-table {
+  border: 2px solid green;
+  margin: 5px;
+}
+
+.product-category {
+  border: 2px solid turquoise;
+  margin: 5px;
+  height: 50%;
+}
+
+.product-category p {
+  font-weight: bold;
+}
+
+.product-row {
+  border: 2px solid red;
+  margin: 5px;
+}
+
+.product-table-title {
+  margin: 5px;
+}
+
+.product-table-title p {
+  font-weight: bold;
+}
