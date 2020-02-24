@@ -4,12 +4,20 @@ import ProductRow from './ProductRow.js';
 
 class ProductTable extends Component {
 	//
-	processData(data) {
+	processData(data, inStockOnly, filterText) {
 		let filter = [];
 		//
 		data.forEach(element => {
 			let category = element.category;
 			let val = this.isHasCategory(filter, category);
+			//filter data
+			if (element.name.indexOf(filterText) === -1) {
+				return;
+			}
+			if (inStockOnly && !element.stocked) {
+				return;
+			}
+			// insert data
 			if (val.result) {
 				let objData = {
 					productName: element.name,
@@ -41,7 +49,9 @@ class ProductTable extends Component {
 	}
 
 	render() {
-		let dataArr = this.processData(this.props.data_product);
+		let inStockOnly = this.props.inStockOnly;
+		let filterText = this.props.filterText;
+		let dataArr = this.processData(this.props.data_product, inStockOnly, filterText);
 		return (
 			<div className='product-table'>
 				<div className='product-table-title'>
@@ -55,7 +65,7 @@ class ProductTable extends Component {
 								<ProductCategoryRow key={item.category} category={item.category} />
 								{
 									item.data.map((item, key) => {
-										return (<ProductRow key={key} product={item} />)
+										return (<ProductRow key={key} product={item} inStockOnly={inStockOnly} />)
 									})
 								}
 							</div>
