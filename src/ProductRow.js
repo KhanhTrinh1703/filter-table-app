@@ -7,7 +7,6 @@ class ProductRow extends Component {
 	}
 	render() {
 		let product = this.props.product;
-		let inStockOnly = this.props.inStockOnly;
 		return (
 			<div className={'product-row ' + (product.productState ? '' : 'out-of-stock')}>
 				<div>
