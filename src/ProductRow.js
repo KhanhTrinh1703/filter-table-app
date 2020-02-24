@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 class ProductRow extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {}
+		this.state = {};
 	}
 	render() {
 		let product = this.props.product;
+		let inStockOnly = this.props.inStockOnly;
 		return (
 			<div className={'product-row ' + (product.productState ? '' : 'out-of-stock')}>
 				<div>
